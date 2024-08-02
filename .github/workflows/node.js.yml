@@ -11,6 +11,6 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-    - run: "echo 'ok'"
+    - run: "echo ${{ env.DEPLOY_STAGE }}"
       env: 
-        stage: ${GITHUB_REF#refs/heads/}
+        DEPLOY_STAGE: ${GITHUB_REF#refs/heads/}
