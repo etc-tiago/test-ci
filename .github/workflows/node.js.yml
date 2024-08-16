@@ -17,3 +17,6 @@ jobs:
      - run: "echo ${{ env.DEPLOY_STAGE }}"
        env: 
          DEPLOY_STAGE: ${GITHUB_REF#refs/heads/}
+     - run: node index.js
+       env: 
+         DEPLOY_STAGE: ${GITHUB_REF#refs/heads/}
